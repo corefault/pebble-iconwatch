@@ -1,0 +1,55 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "daniel@corefault.de",
+    "longName": "iconwatch",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/tv.png",
+                "name": "IMAGE_TV",
+                "type": "png"
+            },
+            {
+                "file": "images/dinner.png",
+                "name": "IMAGE_DINNER",
+                "type": "png"
+            },
+            {
+                "file": "images/working.png",
+                "name": "IMAGE_WORK",
+                "type": "png"
+            },
+            {
+                "file": "images/gotowork.png",
+                "name": "IMAGE_GOWORK",
+                "type": "png"
+            },
+            {
+                "file": "images/sleep.png",
+                "name": "IMAGE_SLEEP",
+                "type": "png"
+            },
+            {
+                "file": "images/coffee.png",
+                "name": "IMAGE_COFFEE",
+                "type": "png"
+            },
+            {
+                "file": "images/lunch.png",
+                "name": "IMAGE_LUNCH",
+                "type": "png"
+            }
+        ]
+    },
+    "shortName": "iconwatch",
+    "uuid": "0a237baf-622c-4e0e-a5ec-1865acd946a3",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": true
+    }
+}
