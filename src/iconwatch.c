@@ -4,6 +4,8 @@ static Window *window;
 static TextLayer *text_layer;
 static GBitmap *icon;
 static BitmapLayer* bitmap_layer;
+static PropertyAnimation *s_animation = 0;
+static char  theTime[10];
 
 // definition of one item
 typedef struct t_config {
@@ -39,14 +41,40 @@ Config data[] = {
    {.hour = 23, .icon = RESOURCE_ID_IMAGE_SLEEP, .height = 83}
 };
 //----------------------------------------------------------------------------
+void create_animation_enter(Animation *animation, bool finished, void *data) {
+   text_layer_set_text(text_layer, theTime);
+   GRect   from = GRect(144, 119, 144, 30);
+   GRect   to   = GRect(0, 119, 144, 30);
+   
+   property_animation_destroy(s_animation);
+   
+   s_animation = property_animation_create_layer_frame((Layer*)text_layer, &from, &to);
+   animation_set_duration ((Animation*) s_animation, 500);
+   
+   animation_schedule((Animation*) s_animation);
+}
+//----------------------------------------------------------------------------
+void create_animation_leave() {
+   GRect   from = GRect(0, 119, 144, 30);
+   GRect   to   = GRect(-144, 119, 144, 30);
+   
+   s_animation = property_animation_create_layer_frame((Layer*)text_layer, &from, &to);
+   animation_set_duration ((Animation*) s_animation, 500);
+   
+   animation_set_handlers((Animation*) s_animation, (AnimationHandlers) {
+    .started = NULL,
+    .stopped = (AnimationStoppedHandler) create_animation_enter,
+   }, NULL);
+   animation_schedule((Animation*) s_animation);
+}
+//----------------------------------------------------------------------------
 void handle_minute_tick(struct tm *tick_time, TimeUnits units_changed) {
    // get current time
    time_t             now = time(NULL);
    struct tm *        currentTime = localtime(&now);
-   static char        buffer[10];
    static uint8_t     hour  = 30;
    
-   snprintf(buffer, 10, "%02d:%02d", currentTime->tm_hour, currentTime->tm_min);
+   snprintf(theTime, 10, "%02d:%02d", currentTime->tm_hour, currentTime->tm_min);
 
    if (hour != currentTime->tm_hour) {
       hour = currentTime->tm_hour;
@@ -56,7 +84,8 @@ void handle_minute_tick(struct tm *tick_time, TimeUnits units_changed) {
       icon = gbitmap_create_with_resource(data[hour].icon);
       bitmap_layer_set_bitmap(bitmap_layer, icon);
    }
-   text_layer_set_text(text_layer, buffer);
+
+   create_animation_leave();
 }
 //----------------------------------------------------------------------------
 static void init() {
@@ -85,8 +114,6 @@ static void init() {
 }
 //----------------------------------------------------------------------------
 static void deinit() {
-   int i = 0;
- 
    window_destroy(window);
    text_layer_destroy(text_layer);
    bitmap_layer_destroy(bitmap_layer);
