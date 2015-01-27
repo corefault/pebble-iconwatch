@@ -9,93 +9,83 @@
     "resources": {
         "media": [
             {
-                "file": "images/slice27.png",
-                "name": "IMAGE_GAME",
-                "type": "png"
-            },
-            {
-                "file": "images/slice24.png",
+                "file": "images/train.png",
                 "name": "IMAGE_TRAIN",
                 "type": "png"
             },
             {
-                "file": "images/slice19.png",
+                "file": "images/laptop.png",
                 "name": "IMAGE_LAPTOP",
                 "type": "png"
             },
             {
-                "file": "images/slice18.png",
+                "file": "images/home.png",
                 "name": "IMAGE_HOME",
                 "type": "png"
             },
             {
-                "file": "images/slice17.png",
+                "file": "images/music.png",
                 "name": "IMAGE_MUSIC",
                 "type": "png"
             },
             {
-                "file": "images/slice16.png",
-                "name": "IMAGE_HEADPHONES",
-                "type": "png"
-            },
-            {
-                "file": "images/slice15.png",
+                "file": "images/glass.png",
                 "name": "IMAGE_GLASS",
                 "type": "png"
             },
             {
-                "file": "images/slice13.png",
+                "file": "images/lab.png",
                 "name": "IMAGE_LAB",
                 "type": "png"
             },
             {
-                "file": "images/slice12.png",
+                "file": "images/lunch.png",
                 "name": "IMAGE_LUNCH",
                 "type": "png"
             },
             {
-                "file": "images/slice11.png",
+                "file": "images/work2.png",
                 "name": "IMAGE_WORK2",
                 "type": "png"
             },
             {
-                "file": "images/slice10.png",
+                "file": "images/coffee.png",
                 "name": "IMAGE_COFFEE",
                 "type": "png"
             },
             {
-                "file": "images/slice9.png",
+                "file": "images/wakeup.png",
                 "name": "IMAGE_WAKEUP",
                 "type": "png"
             },
             {
-                "file": "images/slice8.png",
+                "file": "images/shopping.png",
                 "name": "IMAGE_SHOPPING",
                 "type": "png"
             },
             {
-                "file": "images/slice7.png",
+                "file": "images/work.png",
                 "name": "IMAGE_WORK",
                 "type": "png"
             },
             {
-                "file": "images/slice6.png",
-                "name": "IMAGE_BDAY",
-                "type": "png"
-            },
-            {
-                "file": "images/slice4.png",
-                "name": "IMAGE_BICYCLE",
-                "type": "png"
-            },
-            {
-                "file": "images/slice2.png",
+                "file": "images/sleep.png",
                 "name": "IMAGE_SLEEP",
                 "type": "png"
             },
             {
-                "file": "images/slice1.png",
+                "file": "images/gowork.png",
                 "name": "IMAGE_CAR",
+                "type": "png"
+            },
+            {
+                "file": "images/gas.png",
+                "name": "IMAGE_GAS",
+                "type": "png"
+            },
+            {
+                "file": "images/dinner.png",
+                "name": "IMAGE_DINNER",
                 "type": "png"
             }
         ]
