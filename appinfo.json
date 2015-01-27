@@ -9,68 +9,8 @@
     "resources": {
         "media": [
             {
-                "file": "images/train.png",
-                "name": "IMAGE_TRAIN",
-                "type": "png"
-            },
-            {
-                "file": "images/laptop.png",
-                "name": "IMAGE_LAPTOP",
-                "type": "png"
-            },
-            {
-                "file": "images/home.png",
-                "name": "IMAGE_HOME",
-                "type": "png"
-            },
-            {
-                "file": "images/music.png",
-                "name": "IMAGE_MUSIC",
-                "type": "png"
-            },
-            {
-                "file": "images/glass.png",
-                "name": "IMAGE_GLASS",
-                "type": "png"
-            },
-            {
-                "file": "images/lab.png",
-                "name": "IMAGE_LAB",
-                "type": "png"
-            },
-            {
-                "file": "images/lunch.png",
-                "name": "IMAGE_LUNCH",
-                "type": "png"
-            },
-            {
-                "file": "images/work2.png",
-                "name": "IMAGE_WORK2",
-                "type": "png"
-            },
-            {
-                "file": "images/coffee.png",
-                "name": "IMAGE_COFFEE",
-                "type": "png"
-            },
-            {
-                "file": "images/wakeup.png",
-                "name": "IMAGE_WAKEUP",
-                "type": "png"
-            },
-            {
-                "file": "images/shopping.png",
-                "name": "IMAGE_SHOPPING",
-                "type": "png"
-            },
-            {
-                "file": "images/work.png",
-                "name": "IMAGE_WORK",
-                "type": "png"
-            },
-            {
-                "file": "images/sleep.png",
-                "name": "IMAGE_SLEEP",
+                "file": "images/gas.png",
+                "name": "IMAGE_GAS",
                 "type": "png"
             },
             {
@@ -79,13 +19,63 @@
                 "type": "png"
             },
             {
-                "file": "images/gas.png",
-                "name": "IMAGE_GAS",
+                "file": "images/sleep.png",
+                "name": "IMAGE_SLEEP",
                 "type": "png"
             },
             {
-                "file": "images/dinner.png",
-                "name": "IMAGE_DINNER",
+                "file": "images/work.png",
+                "name": "IMAGE_WORK",
+                "type": "png"
+            },
+            {
+                "file": "images/shopping.png",
+                "name": "IMAGE_SHOPPING",
+                "type": "png"
+            },
+            {
+                "file": "images/wakeup.png",
+                "name": "IMAGE_WAKEUP",
+                "type": "png"
+            },
+            {
+                "file": "images/coffee.png",
+                "name": "IMAGE_COFFEE",
+                "type": "png"
+            },
+            {
+                "file": "images/work2.png",
+                "name": "IMAGE_WORK2",
+                "type": "png"
+            },
+            {
+                "file": "images/lunch.png",
+                "name": "IMAGE_LUNCH",
+                "type": "png"
+            },
+            {
+                "file": "images/lab.png",
+                "name": "IMAGE_LAB",
+                "type": "png"
+            },
+            {
+                "file": "images/glass.png",
+                "name": "IMAGE_GLASS",
+                "type": "png"
+            },
+            {
+                "file": "images/music.png",
+                "name": "IMAGE_MUSIC",
+                "type": "png"
+            },
+            {
+                "file": "images/home.png",
+                "name": "IMAGE_HOME",
+                "type": "png"
+            },
+            {
+                "file": "images/laptop.png",
+                "name": "IMAGE_LAPTOP",
                 "type": "png"
             }
         ]
