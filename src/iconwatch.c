@@ -14,31 +14,57 @@ typedef struct t_config {
    uint8_t   height;
 } Config;
 
+Config we_data[] = {
+   {.hour = 0, .icon = RESOURCE_ID_IMAGE_ALIEN},
+   {.hour = 1, .icon = RESOURCE_ID_IMAGE_ALIEN},
+   {.hour = 2, .icon = RESOURCE_ID_IMAGE_CANDLE},
+   {.hour = 3, .icon = RESOURCE_ID_IMAGE_CANDLE},
+   {.hour = 4, .icon = RESOURCE_ID_IMAGE_CANDLE},
+   {.hour = 5, .icon = RESOURCE_ID_IMAGE_CANDLE},
+   {.hour = 6, .icon = RESOURCE_ID_IMAGE_CANDLE},
+   {.hour = 7, .icon = RESOURCE_ID_IMAGE_CANDLE},
+   {.hour = 8, .icon = RESOURCE_ID_IMAGE_WAKEUP},
+   {.hour = 9, .icon = RESOURCE_ID_IMAGE_COFFEE},
+   {.hour = 10, .icon = RESOURCE_ID_IMAGE_SHOPPING},
+   {.hour = 11, .icon = RESOURCE_ID_IMAGE_SHOPPING},
+   {.hour = 12, .icon = RESOURCE_ID_IMAGE_LUNCH},
+   {.hour = 13, .icon = RESOURCE_ID_IMAGE_SHOPPING},
+   {.hour = 14, .icon = RESOURCE_ID_IMAGE_SHOPPING},
+   {.hour = 15, .icon = RESOURCE_ID_IMAGE_SHOPPING},
+   {.hour = 16, .icon = RESOURCE_ID_IMAGE_SHOPPING},
+   {.hour = 17, .icon = RESOURCE_ID_IMAGE_DINNER_WEEKEND},
+   {.hour = 18, .icon = RESOURCE_ID_IMAGE_MUSIC},
+   {.hour = 19, .icon = RESOURCE_ID_IMAGE_TV},
+   {.hour = 20, .icon = RESOURCE_ID_IMAGE_PARTY},
+   {.hour = 21, .icon = RESOURCE_ID_IMAGE_PARTY},
+   {.hour = 22, .icon = RESOURCE_ID_IMAGE_PARTY},
+   {.hour = 23, .icon = RESOURCE_ID_IMAGE_CANDLE}
+};
 Config data[] = {
-   {.hour = 0, .icon = RESOURCE_ID_IMAGE_SLEEP, .height = 83},
-   {.hour = 1, .icon = RESOURCE_ID_IMAGE_SLEEP, .height = 83},
-   {.hour = 2, .icon = RESOURCE_ID_IMAGE_SLEEP, .height = 83},
-   {.hour = 3, .icon = RESOURCE_ID_IMAGE_SLEEP, .height = 83},
-   {.hour = 4, .icon = RESOURCE_ID_IMAGE_SLEEP, .height = 83},
-   {.hour = 5, .icon = RESOURCE_ID_IMAGE_SLEEP, .height = 83},
-   {.hour = 6, .icon = RESOURCE_ID_IMAGE_SLEEP, .height = 83},
-   {.hour = 7, .icon = RESOURCE_ID_IMAGE_SLEEP, .height = 83},
-   {.hour = 8, .icon = RESOURCE_ID_IMAGE_GOWORK, .height = 64},
-   {.hour = 9, .icon = RESOURCE_ID_IMAGE_COFFEE, .height = 64},
-   {.hour = 10, .icon = RESOURCE_ID_IMAGE_WORK, .height = 64},
-   {.hour = 11, .icon = RESOURCE_ID_IMAGE_WORK, .height = 64},
-   {.hour = 12, .icon = RESOURCE_ID_IMAGE_LUNCH, .height = 40},
-   {.hour = 13, .icon = RESOURCE_ID_IMAGE_WORK, .height = 64},
-   {.hour = 14, .icon = RESOURCE_ID_IMAGE_WORK, .height = 64},
-   {.hour = 15, .icon = RESOURCE_ID_IMAGE_COFFEE, .height = 64},
-   {.hour = 16, .icon = RESOURCE_ID_IMAGE_WORK, .height = 64},
-   {.hour = 17, .icon = RESOURCE_ID_IMAGE_DINNER, .height = 64},
-   {.hour = 18, .icon = RESOURCE_ID_IMAGE_TV, .height = 63},
-   {.hour = 19, .icon = RESOURCE_ID_IMAGE_TV, .height = 63},
-   {.hour = 20, .icon = RESOURCE_ID_IMAGE_TV, .height = 63},
-   {.hour = 21, .icon = RESOURCE_ID_IMAGE_SLEEP, .height = 83},
-   {.hour = 22, .icon = RESOURCE_ID_IMAGE_SLEEP, .height = 83},
-   {.hour = 23, .icon = RESOURCE_ID_IMAGE_SLEEP, .height = 83}
+   {.hour = 0, .icon = RESOURCE_ID_IMAGE_ALIEN},
+   {.hour = 1, .icon = RESOURCE_ID_IMAGE_ALIEN},
+   {.hour = 2, .icon = RESOURCE_ID_IMAGE_CANDLE},
+   {.hour = 3, .icon = RESOURCE_ID_IMAGE_CANDLE},
+   {.hour = 4, .icon = RESOURCE_ID_IMAGE_CANDLE},
+   {.hour = 5, .icon = RESOURCE_ID_IMAGE_CANDLE},
+   {.hour = 6, .icon = RESOURCE_ID_IMAGE_CANDLE},
+   {.hour = 7, .icon = RESOURCE_ID_IMAGE_WAKEUP},
+   {.hour = 8, .icon = RESOURCE_ID_IMAGE_GOWORK},
+   {.hour = 9, .icon = RESOURCE_ID_IMAGE_COFFEE},
+   {.hour = 10, .icon = RESOURCE_ID_IMAGE_WORK},
+   {.hour = 11, .icon = RESOURCE_ID_IMAGE_WORK_LAB},
+   {.hour = 12, .icon = RESOURCE_ID_IMAGE_LUNCH},
+   {.hour = 13, .icon = RESOURCE_ID_IMAGE_WORK},
+   {.hour = 14, .icon = RESOURCE_ID_IMAGE_WORK_LAB},
+   {.hour = 15, .icon = RESOURCE_ID_IMAGE_COFFEE},
+   {.hour = 16, .icon = RESOURCE_ID_IMAGE_WORK},
+   {.hour = 17, .icon = RESOURCE_ID_IMAGE_DINNER},
+   {.hour = 18, .icon = RESOURCE_ID_IMAGE_MUSIC},
+   {.hour = 19, .icon = RESOURCE_ID_IMAGE_TV},
+   {.hour = 20, .icon = RESOURCE_ID_IMAGE_TV},
+   {.hour = 21, .icon = RESOURCE_ID_IMAGE_CANDLE},
+   {.hour = 22, .icon = RESOURCE_ID_IMAGE_CANDLE},
+   {.hour = 23, .icon = RESOURCE_ID_IMAGE_CANDLE}
 };
 //----------------------------------------------------------------------------
 void create_animation_enter(Animation *animation, bool finished, void *data) {
@@ -81,7 +107,13 @@ void handle_minute_tick(struct tm *tick_time, TimeUnits units_changed) {
       if (icon != 0) {
          gbitmap_destroy(icon);
       }
-      icon = gbitmap_create_with_resource(data[hour].icon);
+      
+      // check weekend or not
+      if (currentTime->tm_wday == 0 || currentTime->tm_wday == 6) {
+         icon = gbitmap_create_with_resource(we_data[hour].icon);
+      } else {
+         icon = gbitmap_create_with_resource(data[hour].icon);
+      }
       bitmap_layer_set_bitmap(bitmap_layer, icon);
    }
 
