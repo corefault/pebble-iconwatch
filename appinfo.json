@@ -49,11 +49,6 @@
                 "type": "png"
             },
             {
-                "file": "images/slice10.png",
-                "name": "IMAGE_CAR",
-                "type": "png"
-            },
-            {
                 "file": "images/slice11.png",
                 "name": "IMAGE_WORK2",
                 "type": "png"
