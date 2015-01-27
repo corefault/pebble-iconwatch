@@ -9,83 +9,8 @@
     "resources": {
         "media": [
             {
-                "file": "images/slice1.png",
-                "name": "IMAGE_CAR",
-                "type": "png"
-            },
-            {
-                "file": "images/slice2.png",
-                "name": "IMAGE_SLEEP",
-                "type": "png"
-            },
-            {
-                "file": "images/slice4.png",
-                "name": "IMAGE_BICYCLE",
-                "type": "png"
-            },
-            {
-                "file": "images/slice6.png",
-                "name": "IMAGE_BDAY",
-                "type": "png"
-            },
-            {
-                "file": "images/slice7.png",
-                "name": "IMAGE_WORK",
-                "type": "png"
-            },
-            {
-                "file": "images/slice8.png",
-                "name": "IMAGE_SHOPPING",
-                "type": "png"
-            },
-            {
-                "file": "images/slice9.png",
-                "name": "IMAGE_WAKEUP",
-                "type": "png"
-            },
-            {
-                "file": "images/slice10.png",
-                "name": "IMAGE_COFFEE",
-                "type": "png"
-            },
-            {
-                "file": "images/slice11.png",
-                "name": "IMAGE_WORK2",
-                "type": "png"
-            },
-            {
-                "file": "images/slice12.png",
-                "name": "IMAGE_LUNCH",
-                "type": "png"
-            },
-            {
-                "file": "images/slice13.png",
-                "name": "IMAGE_LAB",
-                "type": "png"
-            },
-            {
-                "file": "images/slice15.png",
-                "name": "IMAGE_GLASS",
-                "type": "png"
-            },
-            {
-                "file": "images/slice16.png",
-                "name": "IMAGE_HEADPHONES",
-                "type": "png"
-            },
-            {
-                "file": "images/slice17.png",
-                "name": "IMAGE_MUSIC",
-                "type": "png"
-            },
-            {
-                "file": "images/slice18.png",
-                "name": "IMAGE_HOME",
-                "type": "png"
-            },
-            {
-                "file": "images/slice19.png",
-                "name": "IMAGE_LAPTOP",
+                "file": "images/slice27.png",
+                "name": "IMAGE_GAME",
                 "type": "png"
             },
             {
@@ -94,8 +19,83 @@
                 "type": "png"
             },
             {
-                "file": "images/slice27.png",
-                "name": "IMAGE_GAME",
+                "file": "images/slice19.png",
+                "name": "IMAGE_LAPTOP",
+                "type": "png"
+            },
+            {
+                "file": "images/slice18.png",
+                "name": "IMAGE_HOME",
+                "type": "png"
+            },
+            {
+                "file": "images/slice17.png",
+                "name": "IMAGE_MUSIC",
+                "type": "png"
+            },
+            {
+                "file": "images/slice16.png",
+                "name": "IMAGE_HEADPHONES",
+                "type": "png"
+            },
+            {
+                "file": "images/slice15.png",
+                "name": "IMAGE_GLASS",
+                "type": "png"
+            },
+            {
+                "file": "images/slice13.png",
+                "name": "IMAGE_LAB",
+                "type": "png"
+            },
+            {
+                "file": "images/slice12.png",
+                "name": "IMAGE_LUNCH",
+                "type": "png"
+            },
+            {
+                "file": "images/slice11.png",
+                "name": "IMAGE_WORK2",
+                "type": "png"
+            },
+            {
+                "file": "images/slice10.png",
+                "name": "IMAGE_COFFEE",
+                "type": "png"
+            },
+            {
+                "file": "images/slice9.png",
+                "name": "IMAGE_WAKEUP",
+                "type": "png"
+            },
+            {
+                "file": "images/slice8.png",
+                "name": "IMAGE_SHOPPING",
+                "type": "png"
+            },
+            {
+                "file": "images/slice7.png",
+                "name": "IMAGE_WORK",
+                "type": "png"
+            },
+            {
+                "file": "images/slice6.png",
+                "name": "IMAGE_BDAY",
+                "type": "png"
+            },
+            {
+                "file": "images/slice4.png",
+                "name": "IMAGE_BICYCLE",
+                "type": "png"
+            },
+            {
+                "file": "images/slice2.png",
+                "name": "IMAGE_SLEEP",
+                "type": "png"
+            },
+            {
+                "file": "images/slice1.png",
+                "name": "IMAGE_CAR",
                 "type": "png"
             }
         ]
@@ -103,7 +103,7 @@
     "shortName": "iconwatch",
     "uuid": "0a237baf-622c-4e0e-a5ec-1865acd946a3",
     "versionCode": 1,
-    "versionLabel": "1.0",
+    "versionLabel": "1.1",
     "watchapp": {
         "watchface": true
     }
